@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login — Falco</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-body">
+    <div class="auth-card">
+        <a href="/" class="logo" style="justify-content:center;margin-bottom:24px"><span class="logo-mark"></span>
+            Falco</a>
+        <h2 style="text-align:center;margin-bottom:24px">Admin Login</h2>
+
+        <form id="loginForm">
+            <div class="form-group"><label>Login</label><input type="text" name="username" required placeholder="admin">
+            </div>
+            <div class="form-group"><label>Password</label><input type="password" name="password" required
+                    placeholder="••••••••"></div>
+            <button type="submit" class="btn btn-gold btn-block" style="margin-top:16px">Kirish</button>
+            <div id="error" class="form-error" style="text-align:center;margin-top:12px"></div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const err = document.getElementById('error');
+            btn.disabled = true; btn.textContent = 'Kirish...'; err.textContent = '';
+
+            try {
+                const res = await fetch('/api/admin/login', {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username: e.target.username.value, password: e.target.password.value })
+                });
+                const json = await res.json();
+                if (!json.ok) throw new Error(json.error || 'Kirishda xatolik');
+
+                localStorage.setItem('falco_admin_token', json.token);
+                sessionStorage.setItem('falco_admin_token', json.token);
+                window.location.href = '/admin';
+            } catch (error) {
+                err.style.display = 'block'; err.textContent = error.message;
+                btn.disabled = false; btn.textContent = 'Kirish';
+            }
+        });
+    </script>
+</body>
+
+</html>

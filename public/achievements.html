@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements — Falco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="nav-wrap">
+        <div class="container nav">
+            <a href="index.html" class="logo"><span class="logo-mark"></span> Falco</a>
+            <nav class="nav-links">
+                <a href="about.html" data-i18n="nav.about">About</a>
+                <a href="opportunities.html" data-i18n="nav.opportunities">Opportunities</a>
+                <a href="achievements.html" class="active" data-i18n="nav.achievements">Achievements</a>
+                <a href="projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="team.html" data-i18n="nav.team">Team</a>
+                <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="nav-right">
+                <div class="lang-switch"><button type="button" data-lang="en" class="active">EN</button><button
+                        type="button" data-lang="ru">RU</button><button type="button" data-lang="uz">UZ</button></div>
+                <a href="join.html" class="btn btn-gold btn-sm" data-i18n="btn.join">Join Falco</a>
+                <button class="burger" id="burger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round">
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="mobileClose"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M18 6 6 18M6 6l12 12" />
+            </svg></button>
+        <div class="lang-switch" style="margin-bottom:20px;align-self:flex-start"><button type="button" data-lang="en"
+                class="active">EN</button><button type="button" data-lang="ru">RU</button><button type="button"
+                data-lang="uz">UZ</button></div>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="opportunities.html" data-i18n="nav.opportunities">Opportunities</a>
+        <a href="achievements.html" data-i18n="nav.achievements">Achievements</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="team.html" data-i18n="nav.team">Team</a>
+        <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="join.html" class="btn btn-gold" data-i18n="btn.join">Join Falco</a>
+    </div>
+
+    <section class="hero" style="padding:70px 0 30px">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="section-head reveal" style="max-width:800px">
+                <span class="eyebrow" data-i18n="ach.eyebrow">RESULTS THAT SPEAK · 2024–2026</span>
+                <h1 class="display" data-i18n="ach.title" style="margin-top:14px">Built through action. <em
+                        class="serif">Proven through results.</em></h1>
+                <p class="lead" data-i18n="ach.text" style="margin-top:20px">From international competitions to emerging
+                    technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+        <div class="container">
+            <div class="stats reveal" style="margin-bottom:60px">
+                <div class="stat"><b>50+</b><span data-i18n="ach.s1">Competitions</span></div>
+                <div class="stat"><b>12+</b><span data-i18n="ach.s2">Medals</span></div>
+                <div class="stat"><b>8+</b><span data-i18n="ach.s3">Countries</span></div>
+                <div class="stat"><b>5+</b><span data-i18n="ach.s4">Intl. Awards</span></div>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card reveal">
+                    <div class="feature-media"><img src="https://picsum.photos/seed/worldskills/800/600" alt=""></div>
+                    <div class="feature-content">
+                        <div class="feature-meta" data-i18n="ach.a1.meta">2025 · CHINA · WorldSkills</div>
+                        <h3 data-i18n="ach.a1.title">Silver · 2nd place</h3>
+                        <div class="award" data-i18n="ach.a1.sub">Logistics competition</div>
+                        <p style="color:var(--text-2);font-size:.9rem;margin-top:14px" data-i18n="ach.a1.text">Silver
+                            medal at international logistics competition.</p>
+                    </div>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="feature-media"><img src="https://picsum.photos/seed/japan2024/800/600" alt=""></div>
+                    <div class="feature-content">
+                        <div class="feature-meta" data-i18n="ach.a2.meta">2024 · JAPAN · Cross-cultural Engineering
+                        </div>
+                        <h3 data-i18n="ach.a2.title">1st · Open Manufacturing Innovation</h3>
+                        <div class="award" data-i18n="ach.a2.sub">International project competition</div>
+                        <p style="color:var(--text-2);font-size:.9rem;margin-top:14px" data-i18n="ach.a2.text">First
+                            place at international competition.</p>
+                    </div>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="feature-media"><img src="https://picsum.photos/seed/koreaskills/800/600" alt=""></div>
+                    <div class="feature-content">
+                        <div class="feature-meta" data-i18n="ach.a3.meta">2024 · SOUTH KOREA · Robotics</div>
+                        <h3 data-i18n="ach.a3.title">Top 5 Finalist</h3>
+                        <div class="award" data-i18n="ach.a3.sub">Autonomous robotics championship</div>
+                        <p style="color:var(--text-2);font-size:.9rem;margin-top:14px" data-i18n="ach.a3.text">Top 5
+                            among 40+ international teams.</p>
+                    </div>
+                </article>
+
+                <article class="feature-card reveal">
+                    <div class="feature-media"><img src="https://picsum.photos/seed/presidenttech/800/600" alt=""></div>
+                    <div class="feature-content">
+                        <div class="feature-meta" data-i18n="ach.a4.meta">2025 · UZBEKISTAN · President Tech Award</div>
+                        <h3 data-i18n="ach.a4.title">Special Mention</h3>
+                        <div class="award" data-i18n="ach.a4.sub">National technology award</div>
+                        <p style="color:var(--text-2);font-size:.9rem;margin-top:14px" data-i18n="ach.a4.text">For
+                            innovation in digital transformation.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="reveal" style="text-align:center;max-width:700px;margin:0 auto">
+                <h2 data-i18n="ach.more.title" style="margin-bottom:20px">More than participation.</h2>
+                <p class="lead" data-i18n="ach.more.text">A growing track record in engineering, technology, and
+                    international competition.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top:none"><span data-i18n="footer.rights">© 2024–2026 Falco. All
+                    rights reserved.</span>
+                <div class="footer-bottom-links"><a href="index.html" data-i18n="nav.home">Home</a><a
+                        href="contact.html" data-i18n="nav.contact">Contact</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

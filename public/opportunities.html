@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities — Falco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="nav-wrap">
+        <div class="container nav">
+            <a href="index.html" class="logo"><span class="logo-mark"></span> Falco</a>
+            <nav class="nav-links">
+                <a href="about.html" data-i18n="nav.about">About</a>
+                <a href="opportunities.html" class="active" data-i18n="nav.opportunities">Opportunities</a>
+                <a href="achievements.html" data-i18n="nav.achievements">Achievements</a>
+                <a href="projects.html" data-i18n="nav.projects">Projects</a>
+                <a href="team.html" data-i18n="nav.team">Team</a>
+                <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="nav-right">
+                <div class="lang-switch"><button type="button" data-lang="en" class="active">EN</button><button
+                        type="button" data-lang="ru">RU</button><button type="button" data-lang="uz">UZ</button></div>
+                <a href="join.html" class="btn btn-gold btn-sm" data-i18n="btn.join">Join Falco</a>
+                <button class="burger" id="burger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round">
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="mobileClose"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M18 6 6 18M6 6l12 12" />
+            </svg></button>
+        <div class="lang-switch" style="margin-bottom:20px;align-self:flex-start"><button type="button" data-lang="en"
+                class="active">EN</button><button type="button" data-lang="ru">RU</button><button type="button"
+                data-lang="uz">UZ</button></div>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="opportunities.html" data-i18n="nav.opportunities">Opportunities</a>
+        <a href="achievements.html" data-i18n="nav.achievements">Achievements</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="team.html" data-i18n="nav.team">Team</a>
+        <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="join.html" class="btn btn-gold" data-i18n="btn.join">Join Falco</a>
+    </div>
+
+    <section class="hero" style="padding:70px 0 30px">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="section-head reveal" style="max-width:760px;text-align:center;margin:0 auto">
+                <span class="eyebrow" data-i18n="opp.eyebrow">EXPLORE OPPORTUNITIES</span>
+                <h1 class="display" data-i18n="opp.title" style="margin-top:14px">Find your <em class="serif">path in
+                        Falco</em>.</h1>
+                <p class="lead" data-i18n="opp.text" style="margin-top:20px">Different interests. One ecosystem.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+        <div class="container">
+            <div class="categories">
+                <a href="projects.html" class="category reveal">
+                    <div class="category-media"><img src="https://picsum.photos/seed/comp2/600/800" alt=""></div>
+                    <div class="category-content">
+                        <div class="category-num">01 · COMPETE</div>
+                        <h3 data-i18n="opp.c1.title">Competitions & Challenges</h3>
+                        <p data-i18n="opp.c1.text">Challenge yourself and represent Falco.</p>
+                        <ul class="category-list">
+                            <li data-i18n="opp.c1.l1">Engineering & technical</li>
+                            <li data-i18n="opp.c1.l2">Business & case</li>
+                            <li data-i18n="opp.c1.l3">Skill development</li>
+                            <li data-i18n="opp.c1.l4">Team preparation</li>
+                        </ul>
+                        <span class="category-cta"><span data-i18n="opp.c1.cta">Explore competitions</span><svg
+                                width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg></span>
+                    </div>
+                </a>
+                <a href="projects.html" class="category reveal">
+                    <div class="category-media"><img src="https://picsum.photos/seed/build2/600/800" alt=""></div>
+                    <div class="category-content">
+                        <div class="category-num">02 · BUILD</div>
+                        <h3 data-i18n="opp.c2.title">Projects & Technology</h3>
+                        <p data-i18n="opp.c2.text">Turn ideas into real solutions.</p>
+                        <ul class="category-list">
+                            <li data-i18n="opp.c2.l1">Robotics & hardware</li>
+                            <li data-i18n="opp.c2.l2">Software & digital</li>
+                            <li data-i18n="opp.c2.l3">Research</li>
+                            <li data-i18n="opp.c2.l4">Real-world problem solving</li>
+                        </ul>
+                        <span class="category-cta"><span data-i18n="opp.c2.cta">Explore projects</span><svg width="12"
+                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg></span>
+                    </div>
+                </a>
+                <a href="join.html" class="category reveal">
+                    <div class="category-media"><img src="https://picsum.photos/seed/launch2/600/800" alt=""></div>
+                    <div class="category-content">
+                        <div class="category-num">03 · LAUNCH</div>
+                        <h3 data-i18n="opp.c3.title">Startups</h3>
+                        <p data-i18n="opp.c3.text">Explore and develop ideas.</p>
+                        <ul class="category-list">
+                            <li data-i18n="opp.c3.l1">Idea validation</li>
+                            <li data-i18n="opp.c3.l2">Mentorship</li>
+                            <li data-i18n="opp.c3.l3">Pitch preparation</li>
+                            <li data-i18n="opp.c3.l4">Resources & partners</li>
+                        </ul>
+                        <span class="category-cta"><span data-i18n="opp.c3.cta">Explore startups</span><svg width="12"
+                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg></span>
+                    </div>
+                </a>
+                <a href="team.html" class="category reveal">
+                    <div class="category-media"><img src="https://picsum.photos/seed/comm2/600/800" alt=""></div>
+                    <div class="category-content">
+                        <div class="category-num">04 · CONNECT</div>
+                        <h3 data-i18n="opp.c4.title">Community</h3>
+                        <p data-i18n="opp.c4.text">Grow together.</p>
+                        <ul class="category-list">
+                            <li data-i18n="opp.c4.l1">Networking</li>
+                            <li data-i18n="opp.c4.l2">Events & meetups</li>
+                            <li data-i18n="opp.c4.l3">Knowledge sharing</li>
+                            <li data-i18n="opp.c4.l3b">Personal growth</li>
+                        </ul>
+                        <span class="category-cta"><span data-i18n="opp.c4.cta">Explore community</span><svg width="12"
+                                height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg></span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="pillars">
+                <div class="pillar reveal">
+                    <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg></div>
+                    <h3 data-i18n="opp.g1.title">Global Opportunities</h3>
+                    <p data-i18n="opp.g1.text">Represent Falco internationally.</p>
+                </div>
+                <div class="pillar reveal">
+                    <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg></div>
+                    <h3 data-i18n="opp.g2.title">Volunteering</h3>
+                    <p data-i18n="opp.g2.text">Contribute to causes that matter.</p>
+                </div>
+                <div class="pillar reveal">
+                    <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg></div>
+                    <h3 data-i18n="opp.g3.title">Work & Freelancing</h3>
+                    <p data-i18n="opp.g3.text">Real projects and paid opportunities.</p>
+                </div>
+            </div>
+
+            <div class="cta-box reveal" style="margin-top:60px">
+                <span class="eyebrow" data-i18n="opp.cta.eyebrow">NOT SURE WHERE YOU FIT?</span>
+                <h2 data-i18n="opp.cta.title" style="margin-top:14px">Explore <em class="serif">everything</em>.</h2>
+                <p data-i18n="opp.cta.text">You can be part of multiple areas.</p>
+                <a href="join.html" class="btn btn-gold btn-lg"><span data-i18n="opp.cta.btn">View all
+                        opportunities</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border-top:none"><span data-i18n="footer.rights">© 2024–2026 Falco. All
+                    rights reserved.</span>
+                <div class="footer-bottom-links"><a href="index.html" data-i18n="nav.home">Home</a><a
+                        href="contact.html" data-i18n="nav.contact">Contact</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

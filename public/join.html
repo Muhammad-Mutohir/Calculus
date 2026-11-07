@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join — Falco</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для капчи */
+        .captcha-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            padding: 16px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .captcha-box label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .captcha-box input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-2);
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav-wrap">
+        <div class="container nav">
+            <a href="/" class="logo"><span class="logo-mark"></span> Falco</a>
+            <nav class="nav-links">
+                <a href="/about">About</a>
+                <a href="/opportunities">Opportunities</a>
+                <a href="/achievements">Achievements</a>
+                <a href="/projects">Projects</a>
+                <a href="/team">Team</a>
+            </nav>
+            <div class="nav-right">
+                <a href="/" class="btn btn-ghost btn-sm">Bosh sahifa</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="section" style="padding-top:60px">
+        <div class="container">
+            <div class="section-head reveal" style="max-width:760px;text-align:center;margin:0 auto 40px">
+                <span class="eyebrow">JOIN FALCO</span>
+                <h1 class="display" style="margin-top:14px">Sizning navbatdagi <em class="serif">bobingiz</em>.</h1>
+                <p class="lead" style="margin-top:20px">Arizani to'ldiring. Jamoamiz 24 soat ichida javob beradi.</p>
+            </div>
+
+            <div class="join-wrap">
+                <form class="join-form reveal" id="joinForm" novalidate>
+
+                    <!-- ЗАЩИТА 1: Honeypot (скрытое поле) -->
+                    <div style="display:none">
+                        <input type="text" name="website_url" tabindex="-1" autocomplete="off">
+                    </div>
+                    <!-- ЗАЩИТА 2: Время заполнения -->
+                    <input type="hidden" id="formStartedAt" name="formStartedAt" value="">
+
+                    <div class="step-indicator">
+                        <div class="step-item active">01 — Siz</div>
+                        <div class="step-item">02 — Ta'lim</div>
+                        <div class="step-item">03 — Ko'nikma</div>
+                        <div class="step-item">04 — Motivatsiya</div>
+                        <div class="step-item">05 — Yakuniy</div>
+                    </div>
+
+                    <!-- STEP 1 -->
+                    <div class="form-step active">
+                        <h3>Keling, tanishaylik</h3>
+                        <div class="form-group">
+                            <label>To'liq ism</label>
+                            <input type="text" name="fullName" required maxlength="80" placeholder="Mutohir">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><label>Yosh</label><input type="number" name="age" required min="16"
+                                    max="40" placeholder="18"></div>
+                            <div class="form-group"><label>Manzil (Shahar)</label><input type="text" name="location"
+                                    required maxlength="60" placeholder="Tashkent"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group"><label>Telefon</label><input type="tel" name="phone" required
+                                    maxlength="30" placeholder="+998900397878"></div>
+                            <div class="form-group"><label>Telegram</label><input type="text" name="telegram" required
+                                    maxlength="40" placeholder="@kendi_Dev"></div>
+                        </div>
+                        <div class="form-group"><label>Email</label><input type="email" name="email" required
+                                maxlength="120" placeholder="mutohir78@gmail.com"></div>
+                    </div>
+
+                    <!-- STEP 2 -->
+                    <div class="form-step">
+                        <h3>Ta'lim</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Talabamisiz?</label>
+                                <select name="isStudent" required>
+                                    <option value="">Tanlang</option>
+                                    <option value="Yes">Ha</option>
+                                    <option value="No">Yo'q</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Daraja</label>
+                                <select name="degree">
+                                    <option value="">Tanlang</option>
+                                    <option value="Bachelor">Bachelor</option>
+                                    <option value="Master">Master</option>
+                                    <option value="PhD">PhD</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group"><label>Universitet / Yo'nalish</label><input type="text"
+                                name="degreeDesc" maxlength="100" placeholder="Tatu"></div>
+                    </div>
+
+                    <!-- STEP 3 -->
+                    <div class="form-step">
+                        <h3>Ko'nikmalar</h3>
+                        <div class="form-group">
+                            <label>Asosiy yo'nalish</label>
+                            <select name="skills" required>
+                                <option value="">Tanlang</option>
+                                <option value="Programming / Software Development">Programming / Software Development
+                                </option>
+                                <option value="Design / UI-UX">Design / UI-UX</option>
+                                <option value="Marketing / SMM">Marketing / SMM</option>
+                                <option value="Business / Startup">Business / Startup</option>
+                                <option value="Engineering / Robotics">Engineering / Robotics</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label>Ko'nikmalar haqida</label><textarea name="skillDetails" required
+                                rows="3" placeholder="Python, JavaScript..."></textarea></div>
+                        <div class="form-group"><label>Tajriba</label><textarea name="experience" required rows="3"
+                                placeholder="Qanday loyihalarda qatnashgansiz?"></textarea></div>
+                        <div class="form-group"><label>Ijtimoiy tarmoq (Link)</label><input type="url"
+                                name="socialLinks" placeholder="https://github.com/..."></div>
+                    </div>
+
+                    <!-- STEP 4 -->
+                    <div class="form-step">
+                        <h3>Motivatsiya</h3>
+                        <div class="form-group"><label>Nega jamoaga qo'shilmoqchisiz?</label><textarea name="whyJoin"
+                                required rows="3"></textarea></div>
+                        <div class="form-group"><label>Maqsadingiz</label><textarea name="goal" required
+                                rows="3"></textarea></div>
+                        <div class="form-group"><label>Nega aynan sizni tanlashimiz kerak?</label><textarea
+                                name="whyChoose" required rows="4"></textarea></div>
+                    </div>
+
+                    <!-- STEP 5 -->
+                    <div class="form-step">
+                        <h3>Yakuniy savollar</h3>
+                        <div class="form-group"><label>Qanday rolni xohlaysiz?</label><textarea name="preferredRole"
+                                required rows="2"></textarea></div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Vaqt</label>
+                                <select name="timeCommitment" required>
+                                    <option value="">Tanlang</option>
+                                    <option value="5-10 hours">5-10 hours</option>
+                                    <option value="10-20 hours">10-20 hours</option>
+                                    <option value="20+ hours">20+ hours</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Tayyormisiz?</label>
+                                <select name="readyToParticipate" required>
+                                    <option value="">Tanlang</option>
+                                    <option value="Yes">Ha</option>
+                                    <option value="No">Yo'q</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group"><label>Muvaffaqiyatsizlikni qanday hal qilasiz?</label><textarea
+                                name="handleFailures" required rows="3"></textarea></div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Falco Core Member?</label>
+                                <select name="falcoCore">
+                                    <option value="No">Yo'q</option>
+                                    <option value="Yes">Ha</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Bizni qayerdan topdingiz?</label>
+                                <select name="source">
+                                    <option value="Telegram">Telegram</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="Friend">Do'st</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group"><label>Qo'shimcha xabar</label><textarea name="additional"
+                                rows="2"></textarea></div>
+
+                        <label class="checkbox">
+                            <input type="checkbox" name="agree" required>
+                            <span class="checkbox-custom"></span>
+                            <span>Shaxsiy ma'lumotlarimni qayta ishlashga roziman</span>
+                        </label>
+
+                        <!-- ЗАЩИТА 3: Математическая капча -->
+                        <div class="captcha-box">
+                            <label>Robot emasligingizni tasdiqlang: <span id="captchaText"
+                                    style="color:var(--gold)"></span></label>
+                            <input type="number" name="captcha" id="captchaInput" required
+                                placeholder="Javobni kiriting">
+                            <input type="hidden" name="captchaExpected" id="captchaExpected">
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-ghost" data-action="back"
+                            style="display:none">Orqaga</button>
+                        <button type="button" class="btn btn-gold" data-action="next">Davom etish</button>
+                        <button type="submit" class="btn btn-gold" data-action="submit" style="display:none">Arizani
+                            yuborish</button>
+                    </div>
+                </form>
+
+                <aside class="join-aside reveal">
+                    <h3>Falco'ning bir qismi bo'ling.</h3>
+                    <p>Arizalar 24 soat ichida ko'rib chiqiladi.</p>
+                    <ul class="join-list">
+                        <li><span class="check">✓</span> Haqiqiy loyihalar</li>
+                        <li><span class="check">✓</span> Mentorlar bilan ishlash</li>
+                        <li><span class="check">✓</span> Xalqaro tanlovlar</li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    </body>
+
+</html>
